@@ -15,7 +15,7 @@ sample_data <- pData(geo_data)
 feature_data <- fData(geo_data)
 
 
-write.csv(expression_data, "C:/Users/Risha/Desktop/Tora Project/Datasets/GSE108474_expression_data.csv", row.names = TRUE)
+write.csv(expression_data, "C:/Users/Desktop/Tora Project/Datasets/GSE108474_expression_data.csv", row.names = TRUE)
 
 gse_108474 <- GSE108474_expression_data
 print(nrow(gse_108474))
@@ -35,7 +35,7 @@ normalized_dataset_108474 <- as.data.frame(lapply(gse_108474[, 2:542], function(
   }
 }))
 
-write.csv(normalized_dataset_108474, "C:/Users/Risha/Desktop/Tora Project/Datasets/Normalized_GSE108474_expression_data.csv", row.names = FALSE)
+write.csv(normalized_dataset_108474, "C:/Users/Desktop/Tora Project/Datasets/Normalized_GSE108474_expression_data.csv", row.names = FALSE)
 
 n_data_108474 <- Normalized_GSE108474_expression_data
  
@@ -48,4 +48,4 @@ df2 <- cbind(first_col, n_data_108474)
 colnames(df2)[1] <- "id"
 head(df2)
 
-write.csv(df2, "C:/Users/Risha/Desktop/Tora Project/Datasets/Normalized_GSE108474_expression_data_with_ID.csv", row.names = FALSE)
+write.csv(df2, "C:/Users/Desktop/Tora Project/Datasets/Normalized_GSE108474_expression_data_with_ID.csv", row.names = FALSE)
