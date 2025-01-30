@@ -15,7 +15,7 @@ sample_data <- pData(geo_data)
 feature_data <- fData(geo_data)
 
 
-write.csv(expression_data, "C:/Users/Risha/Desktop/Tora Project/Datasets/GSE16011_expression_data.csv", row.names = TRUE)
+write.csv(expression_data, "C:/Users/Desktop/Tora Project/Datasets/GSE16011_expression_data.csv", row.names = TRUE)
 
 data_16011 <- GSE16011_expression_data
 
@@ -35,7 +35,7 @@ normalized_dataset_16011 <- as.data.frame(lapply(data_16011[, 2:285], function(x
   }
 }))
 
-write.csv(normalized_dataset_16011, "C:/Users/Risha/Desktop/Tora Project/Datasets/Normalized_GSE16011_expression_data.csv", row.names = FALSE)
+write.csv(normalized_dataset_16011, "C:/Users/Desktop/Tora Project/Datasets/Normalized_GSE16011_expression_data.csv", row.names = FALSE)
 
 n_data <- Normalized_GSE16011_expression_data
 
@@ -45,7 +45,7 @@ df2 <- cbind(first_col, n_data)
 colnames(df2)[1] <- "id"
 head(df2)
 
-write.csv(df2, "C:/Users/Risha/Desktop/Tora Project/Datasets/Normalized_GSE16011_expression_data_with_ID.csv", row.names = FALSE)
+write.csv(df2, "C:/Users/Desktop/Tora Project/Datasets/Normalized_GSE16011_expression_data_with_ID.csv", row.names = FALSE)
 
 
 #k-means centers 
@@ -67,7 +67,7 @@ cluster_centers <- km.out$centers
 cluster_centers_df <- data.frame(cluster_centers)
 cluster_centers_with_strings <- cbind(first_col[1:nrow(cluster_centers_df)], cluster_centers_df)
 print(cluster_centers_with_strings)
-write.csv(cluster_centers_with_strings, "C:/Users/Risha/Desktop/Tora Project/Datasets/Cluster_Centers_16011.csv", row.names = FALSE)
+write.csv(cluster_centers_with_strings, "C:/Users/Desktop/Tora Project/Datasets/Cluster_Centers_16011.csv", row.names = FALSE)
 
 
 
